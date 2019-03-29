@@ -18,7 +18,7 @@ public class myHttpClient implements Interceptor {
         //Intercepts our request so we can add some data to it before it
         //reaches the server
         Request.Builder onGoingRequest = chain.request().newBuilder();
-        onGoingRequest.addHeader("x-api-key", Constants.API_KEY);
+        onGoingRequest.addHeader("X-RapidAPI-Key", Constants.API_KEY);
         return chain.proceed(onGoingRequest.build());
     }
 }
