@@ -1,6 +1,7 @@
 package com.example.hearthstoneapi.retrofit;
 
 import com.example.hearthstoneapi.Constants;
+import com.example.hearthstoneapi.retrofit.model.Cards;
 
 import java.util.List;
 
@@ -15,7 +16,7 @@ public interface HearthstoneService {
 
 
 @GET(Constants.CARDS_API)
-Call<List<String>> loadCards(@Path("name") String name);
+Call<List<Cards>> loadCards(@Path("name") String name);
 
 
     /*

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:strokeColor="@color/Background_Card_Color"
+    app:strokeWidth="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/Background_Card_Color"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_card_Rarity_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="RarityINFO"
+            android:textSize="18sp"
+            app:fontFamily="sans-serif-light"
+            app:layout_constraintBottom_toTopOf="@+id/tv_card_Type_"
+            app:layout_constraintStart_toStartOf="@+id/Guideline_Middle"
+            app:layout_constraintTop_toBottomOf="@+id/tv_card_Flavor_" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_card_Type_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="typeINFO"
+            android:textSize="18sp"
+            app:fontFamily="sans-serif-light"
+            app:layout_constraintBottom_toTopOf="@+id/tv_card_Set_"
+            app:layout_constraintStart_toStartOf="@+id/Guideline_Middle"
+            app:layout_constraintTop_toBottomOf="@+id/tv_card_Rarity_" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_card_Flavor_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Flavor"
+            android:textSize="18sp"
+            app:fontFamily="sans-serif-light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_HS_Divider" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_card_ManaCost_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="manaINFO"
+            android:textSize="18sp"
+            app:fontFamily="sans-serif-light"
+            app:layout_constraintStart_toStartOf="@+id/Guideline_Middle"
+            app:layout_constraintTop_toBottomOf="@+id/iv_card_image" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_card_Set_"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginStart="8dp"
+            android:text="setINFO"
+            android:textSize="18sp"
+            app:fontFamily="sans-serif-light"
+            app:layout_constraintBottom_toTopOf="@+id/tv_card_Class_"
+            app:layout_constraintStart_toStartOf="@+id/Guideline_Middle"
+            app:layout_constraintTop_toBottomOf="@+id/tv_card_Type_" />
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_card_Class_"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginStart="8dp"
+            android:text="classINFO"
+            android:textSize="18sp"
+            app:fontFamily="sans-serif-light"
+            app:layout_constraintBottom_toTopOf="@+id/tv_card_Set_"
+            app:layout_constraintStart_toStartOf="@+id/Guideline_Middle"
+            app:layout_constraintTop_toBottomOf="@+id/tv_card_Set_" />
+
+        <ImageView
+            android:id="@+id/iv_card_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="TODO"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Rarity:"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_card_Rarity_"
+            app:layout_constraintEnd_toStartOf="@+id/Guideline_Middle"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <ImageView
+            android:id="@+id/iv_HS_Divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_card_ManaCost_"
+            app:srcCompat="@drawable/hearthstonedivider" />
+
+        <TextView
+            android:id="@+id/tv_Type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Type:"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_card_Type_"
+            app:layout_constraintEnd_toStartOf="@+id/Guideline_Middle" />
+
+        <TextView
+            android:id="@+id/tv_Set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Set:"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_card_Set_"
+            app:layout_constraintEnd_toStartOf="@+id/Guideline_Middle" />
+
+        <TextView
+            android:id="@+id/tv_Class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Class:"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_card_Class_"
+            app:layout_constraintEnd_toStartOf="@+id/Guideline_Middle" />
+
+
+
+        <TextView
+            android:id="@+id/tv_mana_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Mana cost:"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_card_ManaCost_"
+            app:layout_constraintEnd_toStartOf="@+id/Guideline_Middle" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/Guideline_Middle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
