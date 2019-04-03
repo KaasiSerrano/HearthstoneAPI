@@ -23,6 +23,7 @@ import java.util.List;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import retrofit2.Call;
@@ -76,7 +77,8 @@ public class SearchCardBrain extends AppCompatActivity implements View.OnClickLi
             // init recyclerView
             rvCards = findViewById(R.id.rvCards);
             // Set LayoutManager
-            rvCards.setLayoutManager(new LinearLayoutManager(SearchCardBrain.this));
+            rvCards.setLayoutManager(new GridLayoutManager(SearchCardBrain.this, 2));
+//            rvCards.setLayoutManager(new LinearLayoutManager(SearchCardBrain.this));
             // Set ItemAnimator
             rvCards.setItemAnimator(new DefaultItemAnimator());
             // init Adapter and set to RecyclerView
@@ -114,13 +116,13 @@ public class SearchCardBrain extends AppCompatActivity implements View.OnClickLi
             call.enqueue(new Callback<List<Cards>>() {
                 @Override
                 public void onResponse(Call<List<Cards>> call, Response<List<Cards>> response) {
+
                     if (response.isSuccessful()) {
                         assert response.body() != null;
 
                         Log.d(TAG, "onResponse" + response.body());
-                        cardAdapter.setData(response.body());
 
-                        //  cardAdapter.setData(response.body());
+                        cardAdapter.setData(response.body());
 
 
                     } else {
@@ -130,6 +132,20 @@ public class SearchCardBrain extends AppCompatActivity implements View.OnClickLi
 
                     }
                 }
+/*
+               *//* private List<Cards> cardImage(List<Cards> cards)
+                {
+                    for(int i = 0; i<cards.size();i++)
+                    {
+                       if(cards.get(i).getImg()==null||cards.get(i).getImg().isEmpty())
+                       {
+                           cards.remove(i);
+                       }
+                    }*//*
+
+
+        return cards;
+    }*/
 
 
                 @Override

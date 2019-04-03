@@ -78,11 +78,11 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
         if(golden)
         {
             Log.d(TAG, "onBindViewHolder: "+ urlGolden);
-            Glide.with(context).load(urlGolden).into(holder.iv_Card_Image);
+            Glide.with(context).load(urlGolden).placeholder(R.drawable.error404card).into(holder.iv_Card_Image);
         }
         else
         {
-            Glide.with(context).load(url).into(holder.iv_Card_Image);
+            Glide.with(context).load(url).placeholder(R.drawable.error404card).into(holder.iv_Card_Image);
 
         }
 
@@ -94,7 +94,10 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
     }
 
     public void setData(List<Cards> strings) {
+
+
         this.cards = strings;
+
         notifyDataSetChanged();
     }
 

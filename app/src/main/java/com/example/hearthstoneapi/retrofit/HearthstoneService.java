@@ -19,6 +19,10 @@ public interface HearthstoneService {
 Call<List<Cards>> loadCards(@Path("name") String name);
 
 
+@GET(Constants.FULL_API)
+    Call<List<Cards>> loadFullCards();
+
+
     /*
     @GET(Constants.IMAGES_SEARCH)
     Call<List<Image>> getBreedImage(@Query("breed_id") String breedId, @Query("limit") int limit);*/

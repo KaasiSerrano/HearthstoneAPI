@@ -2,9 +2,7 @@ package com.example.hearthstoneapi.retrofit.model;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
-
-public class Cards {
+public class TavernsOfTimeItem {
 
     @SerializedName("img")
     private String img;
@@ -12,14 +10,8 @@ public class Cards {
     @SerializedName("cost")
     private int cost;
 
-    @SerializedName("collectible")
-    private boolean collectible;
-
-    @SerializedName("artist")
-    private String artist;
-
-    @SerializedName("mechanics")
-    private List<MechanicsItem> mechanics;
+    @SerializedName("health")
+    private int health;
 
     @SerializedName("dbfId")
     private String dbfId;
@@ -30,17 +22,20 @@ public class Cards {
     @SerializedName("locale")
     private String locale;
 
-    @SerializedName("flavor")
-    private String flavor;
-
     @SerializedName("playerClass")
     private String playerClass;
 
     @SerializedName("cardSet")
     private String cardSet;
 
+    @SerializedName("attack")
+    private int attack;
+
     @SerializedName("cardId")
     private String cardId;
+
+    @SerializedName("faction")
+    private String faction;
 
     @SerializedName("name")
     private String name;
@@ -51,8 +46,17 @@ public class Cards {
     @SerializedName("text")
     private String text;
 
-    @SerializedName("rarity")
-    private String rarity;
+    @SerializedName("race")
+    private String race;
+
+    @SerializedName("mechanics")
+    private List<MechanicsItem> mechanics;
+
+    @SerializedName("elite")
+    private boolean elite;
+
+    @SerializedName("durability")
+    private int durability;
 
     public String getImg() {
         return img;
@@ -70,28 +74,12 @@ public class Cards {
         this.cost = cost;
     }
 
-    public boolean isCollectible() {
-        return collectible;
+    public int getHealth() {
+        return health;
     }
 
-    public void setCollectible(boolean collectible) {
-        this.collectible = collectible;
-    }
-
-    public String getArtist() {
-        return artist;
-    }
-
-    public void setArtist(String artist) {
-        this.artist = artist;
-    }
-
-    public List<MechanicsItem> getMechanics() {
-        return mechanics;
-    }
-
-    public void setMechanics(List<MechanicsItem> mechanics) {
-        this.mechanics = mechanics;
+    public void setHealth(int health) {
+        this.health = health;
     }
 
     public String getDbfId() {
@@ -118,14 +106,6 @@ public class Cards {
         this.locale = locale;
     }
 
-    public String getFlavor() {
-        return flavor;
-    }
-
-    public void setFlavor(String flavor) {
-        this.flavor = flavor;
-    }
-
     public String getPlayerClass() {
         return playerClass;
     }
@@ -142,12 +122,28 @@ public class Cards {
         this.cardSet = cardSet;
     }
 
+    public int getAttack() {
+        return attack;
+    }
+
+    public void setAttack(int attack) {
+        this.attack = attack;
+    }
+
     public String getCardId() {
         return cardId;
     }
 
     public void setCardId(String cardId) {
         this.cardId = cardId;
+    }
+
+    public String getFaction() {
+        return faction;
+    }
+
+    public void setFaction(String faction) {
+        this.faction = faction;
     }
 
     public String getName() {
@@ -174,34 +170,60 @@ public class Cards {
         this.text = text;
     }
 
-    public String getRarity() {
-        return rarity;
+    public String getRace() {
+        return race;
     }
 
-    public void setRarity(String rarity) {
-        this.rarity = rarity;
+    public void setRace(String race) {
+        this.race = race;
+    }
+
+    public List<MechanicsItem> getMechanics() {
+        return mechanics;
+    }
+
+    public void setMechanics(List<MechanicsItem> mechanics) {
+        this.mechanics = mechanics;
+    }
+
+    public boolean isElite() {
+        return elite;
+    }
+
+    public void setElite(boolean elite) {
+        this.elite = elite;
+    }
+
+    public int getDurability() {
+        return durability;
+    }
+
+    public void setDurability(int durability) {
+        this.durability = durability;
     }
 
     @Override
     public String toString() {
         return
-                "Cards{" +
+                "TavernsOfTimeItem{" +
                         "img = '" + img + '\'' +
                         ",cost = '" + cost + '\'' +
-                        ",collectible = '" + collectible + '\'' +
-                        ",artist = '" + artist + '\'' +
-                        ",mechanics = '" + mechanics + '\'' +
+                        ",health = '" + health + '\'' +
                         ",dbfId = '" + dbfId + '\'' +
                         ",type = '" + type + '\'' +
                         ",locale = '" + locale + '\'' +
-                        ",flavor = '" + flavor + '\'' +
                         ",playerClass = '" + playerClass + '\'' +
                         ",cardSet = '" + cardSet + '\'' +
+                        ",attack = '" + attack + '\'' +
                         ",cardId = '" + cardId + '\'' +
+                        ",faction = '" + faction + '\'' +
                         ",name = '" + name + '\'' +
                         ",imgGold = '" + imgGold + '\'' +
                         ",text = '" + text + '\'' +
-                        ",rarity = '" + rarity + '\'' +
+                        ",race = '" + race + '\'' +
+                        ",mechanics = '" + mechanics + '\'' +
+                        ",elite = '" + elite + '\'' +
+                        ",durability = '" + durability + '\'' +
                         "}";
     }
 }

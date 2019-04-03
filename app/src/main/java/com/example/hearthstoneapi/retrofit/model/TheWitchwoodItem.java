@@ -2,9 +2,7 @@ package com.example.hearthstoneapi.retrofit.model;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
-
-public class Cards {
+public class TheWitchwoodItem {
 
     @SerializedName("img")
     private String img;
@@ -12,14 +10,14 @@ public class Cards {
     @SerializedName("cost")
     private int cost;
 
-    @SerializedName("collectible")
-    private boolean collectible;
+    @SerializedName("race")
+    private String race;
 
     @SerializedName("artist")
     private String artist;
 
-    @SerializedName("mechanics")
-    private List<MechanicsItem> mechanics;
+    @SerializedName("health")
+    private int health;
 
     @SerializedName("dbfId")
     private String dbfId;
@@ -30,14 +28,14 @@ public class Cards {
     @SerializedName("locale")
     private String locale;
 
-    @SerializedName("flavor")
-    private String flavor;
-
     @SerializedName("playerClass")
     private String playerClass;
 
     @SerializedName("cardSet")
     private String cardSet;
+
+    @SerializedName("attack")
+    private int attack;
 
     @SerializedName("cardId")
     private String cardId;
@@ -51,8 +49,29 @@ public class Cards {
     @SerializedName("text")
     private String text;
 
+    @SerializedName("collectible")
+    private boolean collectible;
+
+    @SerializedName("mechanics")
+    private List<MechanicsItem> mechanics;
+
+    @SerializedName("flavor")
+    private String flavor;
+
+    @SerializedName("elite")
+    private boolean elite;
+
     @SerializedName("rarity")
     private String rarity;
+
+    @SerializedName("armor")
+    private String armor;
+
+    @SerializedName("durability")
+    private int durability;
+
+    @SerializedName("faction")
+    private String faction;
 
     public String getImg() {
         return img;
@@ -70,12 +89,12 @@ public class Cards {
         this.cost = cost;
     }
 
-    public boolean isCollectible() {
-        return collectible;
+    public String getRace() {
+        return race;
     }
 
-    public void setCollectible(boolean collectible) {
-        this.collectible = collectible;
+    public void setRace(String race) {
+        this.race = race;
     }
 
     public String getArtist() {
@@ -86,12 +105,12 @@ public class Cards {
         this.artist = artist;
     }
 
-    public List<MechanicsItem> getMechanics() {
-        return mechanics;
+    public int getHealth() {
+        return health;
     }
 
-    public void setMechanics(List<MechanicsItem> mechanics) {
-        this.mechanics = mechanics;
+    public void setHealth(int health) {
+        this.health = health;
     }
 
     public String getDbfId() {
@@ -118,14 +137,6 @@ public class Cards {
         this.locale = locale;
     }
 
-    public String getFlavor() {
-        return flavor;
-    }
-
-    public void setFlavor(String flavor) {
-        this.flavor = flavor;
-    }
-
     public String getPlayerClass() {
         return playerClass;
     }
@@ -140,6 +151,14 @@ public class Cards {
 
     public void setCardSet(String cardSet) {
         this.cardSet = cardSet;
+    }
+
+    public int getAttack() {
+        return attack;
+    }
+
+    public void setAttack(int attack) {
+        this.attack = attack;
     }
 
     public String getCardId() {
@@ -174,6 +193,38 @@ public class Cards {
         this.text = text;
     }
 
+    public boolean isCollectible() {
+        return collectible;
+    }
+
+    public void setCollectible(boolean collectible) {
+        this.collectible = collectible;
+    }
+
+    public List<MechanicsItem> getMechanics() {
+        return mechanics;
+    }
+
+    public void setMechanics(List<MechanicsItem> mechanics) {
+        this.mechanics = mechanics;
+    }
+
+    public String getFlavor() {
+        return flavor;
+    }
+
+    public void setFlavor(String flavor) {
+        this.flavor = flavor;
+    }
+
+    public boolean isElite() {
+        return elite;
+    }
+
+    public void setElite(boolean elite) {
+        this.elite = elite;
+    }
+
     public String getRarity() {
         return rarity;
     }
@@ -182,26 +233,57 @@ public class Cards {
         this.rarity = rarity;
     }
 
+    public String getArmor() {
+        return armor;
+    }
+
+    public void setArmor(String armor) {
+        this.armor = armor;
+    }
+
+    public int getDurability() {
+        return durability;
+    }
+
+    public void setDurability(int durability) {
+        this.durability = durability;
+    }
+
+    public String getFaction() {
+        return faction;
+    }
+
+    public void setFaction(String faction) {
+        this.faction = faction;
+    }
+
     @Override
     public String toString() {
         return
-                "Cards{" +
+                "TheWitchwoodItem{" +
                         "img = '" + img + '\'' +
                         ",cost = '" + cost + '\'' +
-                        ",collectible = '" + collectible + '\'' +
+                        ",race = '" + race + '\'' +
                         ",artist = '" + artist + '\'' +
-                        ",mechanics = '" + mechanics + '\'' +
+                        ",health = '" + health + '\'' +
                         ",dbfId = '" + dbfId + '\'' +
                         ",type = '" + type + '\'' +
                         ",locale = '" + locale + '\'' +
-                        ",flavor = '" + flavor + '\'' +
                         ",playerClass = '" + playerClass + '\'' +
                         ",cardSet = '" + cardSet + '\'' +
+                        ",attack = '" + attack + '\'' +
                         ",cardId = '" + cardId + '\'' +
                         ",name = '" + name + '\'' +
                         ",imgGold = '" + imgGold + '\'' +
                         ",text = '" + text + '\'' +
+                        ",collectible = '" + collectible + '\'' +
+                        ",mechanics = '" + mechanics + '\'' +
+                        ",flavor = '" + flavor + '\'' +
+                        ",elite = '" + elite + '\'' +
                         ",rarity = '" + rarity + '\'' +
+                        ",armor = '" + armor + '\'' +
+                        ",durability = '" + durability + '\'' +
+                        ",faction = '" + faction + '\'' +
                         "}";
     }
 }

@@ -2,9 +2,7 @@ package com.example.hearthstoneapi.retrofit.model;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
-
-public class Cards {
+public class ClassicItem {
 
     @SerializedName("img")
     private String img;
@@ -15,11 +13,14 @@ public class Cards {
     @SerializedName("collectible")
     private boolean collectible;
 
+    @SerializedName("race")
+    private String race;
+
     @SerializedName("artist")
     private String artist;
 
-    @SerializedName("mechanics")
-    private List<MechanicsItem> mechanics;
+    @SerializedName("health")
+    private int health;
 
     @SerializedName("dbfId")
     private String dbfId;
@@ -39,8 +40,14 @@ public class Cards {
     @SerializedName("cardSet")
     private String cardSet;
 
+    @SerializedName("attack")
+    private int attack;
+
     @SerializedName("cardId")
     private String cardId;
+
+    @SerializedName("faction")
+    private String faction;
 
     @SerializedName("name")
     private String name;
@@ -53,6 +60,15 @@ public class Cards {
 
     @SerializedName("rarity")
     private String rarity;
+
+    @SerializedName("mechanics")
+    private List<MechanicsItem> mechanics;
+
+    @SerializedName("elite")
+    private boolean elite;
+
+    @SerializedName("durability")
+    private int durability;
 
     public String getImg() {
         return img;
@@ -78,6 +94,14 @@ public class Cards {
         this.collectible = collectible;
     }
 
+    public String getRace() {
+        return race;
+    }
+
+    public void setRace(String race) {
+        this.race = race;
+    }
+
     public String getArtist() {
         return artist;
     }
@@ -86,12 +110,12 @@ public class Cards {
         this.artist = artist;
     }
 
-    public List<MechanicsItem> getMechanics() {
-        return mechanics;
+    public int getHealth() {
+        return health;
     }
 
-    public void setMechanics(List<MechanicsItem> mechanics) {
-        this.mechanics = mechanics;
+    public void setHealth(int health) {
+        this.health = health;
     }
 
     public String getDbfId() {
@@ -142,12 +166,28 @@ public class Cards {
         this.cardSet = cardSet;
     }
 
+    public int getAttack() {
+        return attack;
+    }
+
+    public void setAttack(int attack) {
+        this.attack = attack;
+    }
+
     public String getCardId() {
         return cardId;
     }
 
     public void setCardId(String cardId) {
         this.cardId = cardId;
+    }
+
+    public String getFaction() {
+        return faction;
+    }
+
+    public void setFaction(String faction) {
+        this.faction = faction;
     }
 
     public String getName() {
@@ -182,26 +222,56 @@ public class Cards {
         this.rarity = rarity;
     }
 
+    public List<MechanicsItem> getMechanics() {
+        return mechanics;
+    }
+
+    public void setMechanics(List<MechanicsItem> mechanics) {
+        this.mechanics = mechanics;
+    }
+
+    public boolean isElite() {
+        return elite;
+    }
+
+    public void setElite(boolean elite) {
+        this.elite = elite;
+    }
+
+    public int getDurability() {
+        return durability;
+    }
+
+    public void setDurability(int durability) {
+        this.durability = durability;
+    }
+
     @Override
     public String toString() {
         return
-                "Cards{" +
+                "ClassicItem{" +
                         "img = '" + img + '\'' +
                         ",cost = '" + cost + '\'' +
                         ",collectible = '" + collectible + '\'' +
+                        ",race = '" + race + '\'' +
                         ",artist = '" + artist + '\'' +
-                        ",mechanics = '" + mechanics + '\'' +
+                        ",health = '" + health + '\'' +
                         ",dbfId = '" + dbfId + '\'' +
                         ",type = '" + type + '\'' +
                         ",locale = '" + locale + '\'' +
                         ",flavor = '" + flavor + '\'' +
                         ",playerClass = '" + playerClass + '\'' +
                         ",cardSet = '" + cardSet + '\'' +
+                        ",attack = '" + attack + '\'' +
                         ",cardId = '" + cardId + '\'' +
+                        ",faction = '" + faction + '\'' +
                         ",name = '" + name + '\'' +
                         ",imgGold = '" + imgGold + '\'' +
                         ",text = '" + text + '\'' +
                         ",rarity = '" + rarity + '\'' +
+                        ",mechanics = '" + mechanics + '\'' +
+                        ",elite = '" + elite + '\'' +
+                        ",durability = '" + durability + '\'' +
                         "}";
     }
 }

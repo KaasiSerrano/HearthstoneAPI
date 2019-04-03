@@ -2,9 +2,7 @@ package com.example.hearthstoneapi.retrofit.model;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
-
-public class Cards {
+public class OneNightInKarazhanItem {
 
     @SerializedName("img")
     private String img;
@@ -18,14 +16,17 @@ public class Cards {
     @SerializedName("artist")
     private String artist;
 
-    @SerializedName("mechanics")
-    private List<MechanicsItem> mechanics;
+    @SerializedName("health")
+    private int health;
 
     @SerializedName("dbfId")
     private String dbfId;
 
     @SerializedName("type")
     private String type;
+
+    @SerializedName("howToGetGold")
+    private String howToGetGold;
 
     @SerializedName("locale")
     private String locale;
@@ -39,6 +40,9 @@ public class Cards {
     @SerializedName("cardSet")
     private String cardSet;
 
+    @SerializedName("attack")
+    private int attack;
+
     @SerializedName("cardId")
     private String cardId;
 
@@ -48,11 +52,29 @@ public class Cards {
     @SerializedName("imgGold")
     private String imgGold;
 
+    @SerializedName("howToGet")
+    private String howToGet;
+
     @SerializedName("text")
     private String text;
 
     @SerializedName("rarity")
     private String rarity;
+
+    @SerializedName("mechanics")
+    private List<MechanicsItem> mechanics;
+
+    @SerializedName("elite")
+    private boolean elite;
+
+    @SerializedName("race")
+    private String race;
+
+    @SerializedName("faction")
+    private String faction;
+
+    @SerializedName("durability")
+    private int durability;
 
     public String getImg() {
         return img;
@@ -86,12 +108,12 @@ public class Cards {
         this.artist = artist;
     }
 
-    public List<MechanicsItem> getMechanics() {
-        return mechanics;
+    public int getHealth() {
+        return health;
     }
 
-    public void setMechanics(List<MechanicsItem> mechanics) {
-        this.mechanics = mechanics;
+    public void setHealth(int health) {
+        this.health = health;
     }
 
     public String getDbfId() {
@@ -108,6 +130,14 @@ public class Cards {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getHowToGetGold() {
+        return howToGetGold;
+    }
+
+    public void setHowToGetGold(String howToGetGold) {
+        this.howToGetGold = howToGetGold;
     }
 
     public String getLocale() {
@@ -142,6 +172,14 @@ public class Cards {
         this.cardSet = cardSet;
     }
 
+    public int getAttack() {
+        return attack;
+    }
+
+    public void setAttack(int attack) {
+        this.attack = attack;
+    }
+
     public String getCardId() {
         return cardId;
     }
@@ -166,6 +204,14 @@ public class Cards {
         this.imgGold = imgGold;
     }
 
+    public String getHowToGet() {
+        return howToGet;
+    }
+
+    public void setHowToGet(String howToGet) {
+        this.howToGet = howToGet;
+    }
+
     public String getText() {
         return text;
     }
@@ -182,26 +228,74 @@ public class Cards {
         this.rarity = rarity;
     }
 
+    public List<MechanicsItem> getMechanics() {
+        return mechanics;
+    }
+
+    public void setMechanics(List<MechanicsItem> mechanics) {
+        this.mechanics = mechanics;
+    }
+
+    public boolean isElite() {
+        return elite;
+    }
+
+    public void setElite(boolean elite) {
+        this.elite = elite;
+    }
+
+    public String getRace() {
+        return race;
+    }
+
+    public void setRace(String race) {
+        this.race = race;
+    }
+
+    public String getFaction() {
+        return faction;
+    }
+
+    public void setFaction(String faction) {
+        this.faction = faction;
+    }
+
+    public int getDurability() {
+        return durability;
+    }
+
+    public void setDurability(int durability) {
+        this.durability = durability;
+    }
+
     @Override
     public String toString() {
         return
-                "Cards{" +
+                "OneNightInKarazhanItem{" +
                         "img = '" + img + '\'' +
                         ",cost = '" + cost + '\'' +
                         ",collectible = '" + collectible + '\'' +
                         ",artist = '" + artist + '\'' +
-                        ",mechanics = '" + mechanics + '\'' +
+                        ",health = '" + health + '\'' +
                         ",dbfId = '" + dbfId + '\'' +
                         ",type = '" + type + '\'' +
+                        ",howToGetGold = '" + howToGetGold + '\'' +
                         ",locale = '" + locale + '\'' +
                         ",flavor = '" + flavor + '\'' +
                         ",playerClass = '" + playerClass + '\'' +
                         ",cardSet = '" + cardSet + '\'' +
+                        ",attack = '" + attack + '\'' +
                         ",cardId = '" + cardId + '\'' +
                         ",name = '" + name + '\'' +
                         ",imgGold = '" + imgGold + '\'' +
+                        ",howToGet = '" + howToGet + '\'' +
                         ",text = '" + text + '\'' +
                         ",rarity = '" + rarity + '\'' +
+                        ",mechanics = '" + mechanics + '\'' +
+                        ",elite = '" + elite + '\'' +
+                        ",race = '" + race + '\'' +
+                        ",faction = '" + faction + '\'' +
+                        ",durability = '" + durability + '\'' +
                         "}";
     }
 }

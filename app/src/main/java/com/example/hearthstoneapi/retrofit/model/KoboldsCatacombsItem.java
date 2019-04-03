@@ -2,9 +2,7 @@ package com.example.hearthstoneapi.retrofit.model;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
-
-public class Cards {
+public class KoboldsCatacombsItem {
 
     @SerializedName("img")
     private String img;
@@ -12,14 +10,8 @@ public class Cards {
     @SerializedName("cost")
     private int cost;
 
-    @SerializedName("collectible")
-    private boolean collectible;
-
     @SerializedName("artist")
     private String artist;
-
-    @SerializedName("mechanics")
-    private List<MechanicsItem> mechanics;
 
     @SerializedName("dbfId")
     private String dbfId;
@@ -30,9 +22,6 @@ public class Cards {
     @SerializedName("locale")
     private String locale;
 
-    @SerializedName("flavor")
-    private String flavor;
-
     @SerializedName("playerClass")
     private String playerClass;
 
@@ -41,6 +30,9 @@ public class Cards {
 
     @SerializedName("cardId")
     private String cardId;
+
+    @SerializedName("faction")
+    private String faction;
 
     @SerializedName("name")
     private String name;
@@ -51,8 +43,41 @@ public class Cards {
     @SerializedName("text")
     private String text;
 
+    @SerializedName("mechanics")
+    private List<MechanicsItem> mechanics;
+
+    @SerializedName("race")
+    private String race;
+
+    @SerializedName("health")
+    private int health;
+
+    @SerializedName("elite")
+    private boolean elite;
+
+    @SerializedName("attack")
+    private int attack;
+
+    @SerializedName("collectible")
+    private boolean collectible;
+
+    @SerializedName("flavor")
+    private String flavor;
+
     @SerializedName("rarity")
     private String rarity;
+
+    @SerializedName("durability")
+    private int durability;
+
+    @SerializedName("howToGetGold")
+    private String howToGetGold;
+
+    @SerializedName("howToGet")
+    private String howToGet;
+
+    @SerializedName("armor")
+    private String armor;
 
     public String getImg() {
         return img;
@@ -70,28 +95,12 @@ public class Cards {
         this.cost = cost;
     }
 
-    public boolean isCollectible() {
-        return collectible;
-    }
-
-    public void setCollectible(boolean collectible) {
-        this.collectible = collectible;
-    }
-
     public String getArtist() {
         return artist;
     }
 
     public void setArtist(String artist) {
         this.artist = artist;
-    }
-
-    public List<MechanicsItem> getMechanics() {
-        return mechanics;
-    }
-
-    public void setMechanics(List<MechanicsItem> mechanics) {
-        this.mechanics = mechanics;
     }
 
     public String getDbfId() {
@@ -118,14 +127,6 @@ public class Cards {
         this.locale = locale;
     }
 
-    public String getFlavor() {
-        return flavor;
-    }
-
-    public void setFlavor(String flavor) {
-        this.flavor = flavor;
-    }
-
     public String getPlayerClass() {
         return playerClass;
     }
@@ -148,6 +149,14 @@ public class Cards {
 
     public void setCardId(String cardId) {
         this.cardId = cardId;
+    }
+
+    public String getFaction() {
+        return faction;
+    }
+
+    public void setFaction(String faction) {
+        this.faction = faction;
     }
 
     public String getName() {
@@ -174,6 +183,62 @@ public class Cards {
         this.text = text;
     }
 
+    public List<MechanicsItem> getMechanics() {
+        return mechanics;
+    }
+
+    public void setMechanics(List<MechanicsItem> mechanics) {
+        this.mechanics = mechanics;
+    }
+
+    public String getRace() {
+        return race;
+    }
+
+    public void setRace(String race) {
+        this.race = race;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public boolean isElite() {
+        return elite;
+    }
+
+    public void setElite(boolean elite) {
+        this.elite = elite;
+    }
+
+    public int getAttack() {
+        return attack;
+    }
+
+    public void setAttack(int attack) {
+        this.attack = attack;
+    }
+
+    public boolean isCollectible() {
+        return collectible;
+    }
+
+    public void setCollectible(boolean collectible) {
+        this.collectible = collectible;
+    }
+
+    public String getFlavor() {
+        return flavor;
+    }
+
+    public void setFlavor(String flavor) {
+        this.flavor = flavor;
+    }
+
     public String getRarity() {
         return rarity;
     }
@@ -182,26 +247,67 @@ public class Cards {
         this.rarity = rarity;
     }
 
+    public int getDurability() {
+        return durability;
+    }
+
+    public void setDurability(int durability) {
+        this.durability = durability;
+    }
+
+    public String getHowToGetGold() {
+        return howToGetGold;
+    }
+
+    public void setHowToGetGold(String howToGetGold) {
+        this.howToGetGold = howToGetGold;
+    }
+
+    public String getHowToGet() {
+        return howToGet;
+    }
+
+    public void setHowToGet(String howToGet) {
+        this.howToGet = howToGet;
+    }
+
+    public String getArmor() {
+        return armor;
+    }
+
+    public void setArmor(String armor) {
+        this.armor = armor;
+    }
+
     @Override
     public String toString() {
         return
-                "Cards{" +
+                "KoboldsCatacombsItem{" +
                         "img = '" + img + '\'' +
                         ",cost = '" + cost + '\'' +
-                        ",collectible = '" + collectible + '\'' +
                         ",artist = '" + artist + '\'' +
-                        ",mechanics = '" + mechanics + '\'' +
                         ",dbfId = '" + dbfId + '\'' +
                         ",type = '" + type + '\'' +
                         ",locale = '" + locale + '\'' +
-                        ",flavor = '" + flavor + '\'' +
                         ",playerClass = '" + playerClass + '\'' +
                         ",cardSet = '" + cardSet + '\'' +
                         ",cardId = '" + cardId + '\'' +
+                        ",faction = '" + faction + '\'' +
                         ",name = '" + name + '\'' +
                         ",imgGold = '" + imgGold + '\'' +
                         ",text = '" + text + '\'' +
+                        ",mechanics = '" + mechanics + '\'' +
+                        ",race = '" + race + '\'' +
+                        ",health = '" + health + '\'' +
+                        ",elite = '" + elite + '\'' +
+                        ",attack = '" + attack + '\'' +
+                        ",collectible = '" + collectible + '\'' +
+                        ",flavor = '" + flavor + '\'' +
                         ",rarity = '" + rarity + '\'' +
+                        ",durability = '" + durability + '\'' +
+                        ",howToGetGold = '" + howToGetGold + '\'' +
+                        ",howToGet = '" + howToGet + '\'' +
+                        ",armor = '" + armor + '\'' +
                         "}";
     }
 }
