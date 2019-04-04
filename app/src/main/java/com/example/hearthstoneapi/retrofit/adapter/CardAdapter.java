@@ -92,10 +92,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
     }
 
     public void setData(List<Cards> strings) {
-
-
         this.cards = strings;
-
         notifyDataSetChanged();
     }
 
