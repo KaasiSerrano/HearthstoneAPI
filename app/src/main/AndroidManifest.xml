@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".CardsardBrain"/>
+        <activity android:name=".AllCardsBrain"/>
         <activity android:name=".GridViewBrain"/>
         <activity android:name=".SearchCardBrain"/>
 

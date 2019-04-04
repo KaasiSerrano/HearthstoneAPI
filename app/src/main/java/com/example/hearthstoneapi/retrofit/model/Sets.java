@@ -4,9 +4,12 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+import androidx.room.ColumnInfo;
+
 public class Sets {
 
     @SerializedName("Basic")
+    @ColumnInfo(name = "basic")
     private List<BasicItem> basic;
 
     @SerializedName("Knights of the Frozen Throne")

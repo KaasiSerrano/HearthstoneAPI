@@ -2,25 +2,26 @@ package com.example.hearthstoneapi.retrofit;
 
 import com.example.hearthstoneapi.Constants;
 import com.example.hearthstoneapi.retrofit.model.Cards;
+import com.example.hearthstoneapi.retrofit.model.Sets;
 
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
-import retrofit2.http.Query;
 
 public interface HearthstoneService {
 
 
+    @GET(Constants.CARDS_API)
+    Call<List<Cards>> loadCards(@Path("name") String name);
 
 
-@GET(Constants.CARDS_API)
-Call<List<Cards>> loadCards(@Path("name") String name);
+    @GET(Constants.FULL_API)
+    Call<Sets> loadFullCards();
 
-
-@GET(Constants.FULL_API)
-    Call<List<Cards>> loadFullCards();
+    @GET(Constants.SET_SEARCH)
+    Call<List<Cards>> loadSetCards(@Path("name") String name);
 
 
     /*

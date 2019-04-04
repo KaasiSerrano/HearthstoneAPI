@@ -1,9 +1,9 @@
 package com.example.hearthstoneapi;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,27 +33,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         gotoCards.setOnClickListener(this);
 
 
-
-
     }
 
     @Override
     public void onClick(View v) {
 
         switch (v.getId()) {
-            case R.id.button_GOTO_Faves:
-            {
-                startActivity(new Intent(MainActivity.this,GridViewBrain.class));
-            }break;
-            case R.id.button_GOTO_Search:
-            {
-                startActivity(new Intent(MainActivity.this,SearchCardBrain.class));
-            }break;
-            case R.id.button_GOTO_Cards:
-            {
+            case R.id.button_GOTO_Faves: {
+                startActivity(new Intent(MainActivity.this, GridViewBrain.class));
+            }
+            break;
+            case R.id.button_GOTO_Search: {
+                startActivity(new Intent(MainActivity.this, SearchCardBrain.class));
+            }
+            break;
+            case R.id.button_GOTO_Cards: {
 
-                startActivity(new Intent(MainActivity.this,CardsardBrain.class));
-            }break;
+                startActivity(new Intent(MainActivity.this, AllCardsBrain.class));
+            }
+            break;
 
         }
 
