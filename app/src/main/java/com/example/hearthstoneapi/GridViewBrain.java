@@ -23,21 +23,21 @@ public class GridViewBrain extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.favorites_page);
+        setContentView(R.layout.under_construction);
 
-
+/*
         setUpList();
         GridView gridView =  findViewById(R.id.master_grid_view);
         GridViewAdapater adapter = new GridViewAdapater(lstSource,this);
-        gridView.setAdapter(adapter);
+        gridView.setAdapter(adapter);*/
 
 
-    }
+    }/*
     private void setUpList()
     {
 for(String item:array_characters)
 {
     lstSource.add(item);
 }
-    }
+    }*/
 }

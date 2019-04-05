@@ -5,21 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Background_Card_Color"
-    tools:context=".AllCardsBrain">
+    tools:context=".DisplaySetCards">
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvAllCards"
+        android:id="@+id/rvCards"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:paddingTop="15dp"
-        android:paddingBottom="20dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/all_cards_inside" />
+        app:spanCount="2"
+        tools:listitem="@layout/card_item_view"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

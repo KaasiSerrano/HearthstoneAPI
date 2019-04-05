@@ -1,5 +1,6 @@
 package com.example.hearthstoneapi;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
@@ -74,60 +75,13 @@ public class AllCardsBrain extends AppCompatActivity implements SetsNameAdapter.
 
     @Override
     public void setClicked(String setName) {
-        cardSetRequest(setName);
-/*
-        if (setName.equals("Basic")) {
-            Toast.makeText(this, setName, Toast.LENGTH_SHORT).show();
-            cardSetRequest(setName);
-        }
-        if (setName.equals("Knights of the Frozen Throne")) {
-            Toast.makeText(this, setName, Toast.LENGTH_SHORT).show();
 
-            //TODO show cards from above class
-        }
-        if (setName.equals("Whispers of the Old Gods")) {
-            Toast.makeText(this, setName, Toast.LENGTH_SHORT).show();
-
-            //TODO show cards from above class
-        }
-        if (setName == "The Boomsday Project") {
-            Toast.makeText(this, setName, Toast.LENGTH_SHORT).show();
-
-            //TODO show cards from above class
-        }
-        if (setName == "Goblins vs Gnomes") {
-            Toast.makeText(this, setName, Toast.LENGTH_SHORT).show();
-
-            //TODO show cards from above class
-        }
-        if (setName == "The Witchwood") {
-            Toast.makeText(this, setName, Toast.LENGTH_SHORT).show();
-
-            //TODO show cards from above class
-        }
-        if (setName == "The Grand Tournament") {
-            Toast.makeText(this, setName, Toast.LENGTH_SHORT).show();
-
-            //TODO show cards from above class
-        }
-        if (setName == "Journey to Un'Goro") {
-            Toast.makeText(this, setName, Toast.LENGTH_SHORT).show();
-
-            //TODO show cards from above class
-        }
-        if (setName == "Rastakhan's Rumble") {
-            Toast.makeText(this, setName, Toast.LENGTH_SHORT).show();
-
-            //TODO show cards from above class
-        }
-        if (setName == "Mean Streets of Gadgetzan") {
-            Toast.makeText(this, setName, Toast.LENGTH_SHORT).show();
-
-            //TODO show cards from above class
-        }*/
+        Intent intent = new Intent(AllCardsBrain.this, DisplaySetCards.class);
+        intent.putExtra("setName", setName);
+        startActivity(intent);
 
     }
-
+/*
     public void cardSetRequest(String SetName) {
 
         Log.d(TAG, "onCreate: CardName " + SetName);
@@ -168,7 +122,7 @@ public class AllCardsBrain extends AppCompatActivity implements SetsNameAdapter.
             }
         });
 
-    }
+    }*/
 
 }
 

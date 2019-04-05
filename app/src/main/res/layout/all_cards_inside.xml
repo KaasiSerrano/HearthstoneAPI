@@ -13,16 +13,14 @@
         android:background="@color/Background_Card_Color">
 
 
-        <Button
+        <TextView
             android:id="@+id/tv_SetName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             android:gravity="center"
             android:padding="5dp"
             android:text="SET_NAME_PLACEHOLDER"
-            android:textSize="18sp"
+            android:textSize="30sp"
             app:fontFamily="sans-serif-light"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"

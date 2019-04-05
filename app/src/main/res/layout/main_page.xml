@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/favorites_ready"
+        android:background="@drawable/favorites_button"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/search_ready"
+        android:background="@drawable/custom_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
@@ -76,7 +76,7 @@
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/cards_ready"
+        android:background="@drawable/cards_button"
         app:layout_constraintBottom_toTopOf="@+id/button_GOTO_Faves"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

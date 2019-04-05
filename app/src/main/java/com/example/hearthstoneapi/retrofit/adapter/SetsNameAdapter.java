@@ -5,11 +5,9 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.TextView;
 
-import com.example.hearthstoneapi.ClassSearch;
 import com.example.hearthstoneapi.R;
-import com.example.hearthstoneapi.SearchCardBrain;
 import com.google.android.material.card.MaterialCardView;
 
 import java.util.List;
@@ -21,9 +19,7 @@ public class SetsNameAdapter extends RecyclerView.Adapter<SetsNameAdapter.CardVi
     private static final String TAG = "CardAdapter";
     private Context context;
     private List<String> setNames;
-    SearchCardBrain searchCardBrain;
-    //private Button clickableSetName;
-    ClassSearch classSearch;
+
     private String setName;
     private OnSetClicked setClickedInterface;
 
@@ -58,7 +54,7 @@ public class SetsNameAdapter extends RecyclerView.Adapter<SetsNameAdapter.CardVi
     }
 
     class CardViewHolder extends RecyclerView.ViewHolder {
-        private Button tv_setName;
+        private TextView tv_setName;
         private MaterialCardView cardView;
 
         private CardViewHolder(@NonNull View itemView) {

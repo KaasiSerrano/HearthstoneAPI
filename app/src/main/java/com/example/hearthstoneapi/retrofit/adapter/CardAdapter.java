@@ -95,7 +95,6 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
 
 
         this.cards = strings;
-
         notifyDataSetChanged();
     }
 
