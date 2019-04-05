@@ -28,7 +28,6 @@ public class AllCardsBrain extends AppCompatActivity implements SetsNameAdapter.
     private RecyclerView rvAllCards;
     SetsNameAdapter allcardAdapter;
     CardAdapter cardAdapter;
-
     private static final String TAG = "AllCardsBrain";
 
 
@@ -73,56 +72,14 @@ public class AllCardsBrain extends AppCompatActivity implements SetsNameAdapter.
         return setNames;
     }
 
+    DisplaySetCards displaySetCards;
+
     @Override
     public void setClicked(String setName) {
-
-        Intent intent = new Intent(AllCardsBrain.this, DisplaySetCards.class);
-        intent.putExtra("setName", setName);
-        startActivity(intent);
+        new DisplaySetCards().setSetName(setName);
+        startActivity(new Intent(AllCardsBrain.this, DisplaySetCards.class));
 
     }
-/*
-    public void cardSetRequest(String SetName) {
-
-        Log.d(TAG, "onCreate: CardName " + SetName);
-
-        HearthstoneService hearthstoneService =
-                RetrofitClientInstance
-                        .getRetrofit()
-                        .create(HearthstoneService.class);
-
-
-        Call<List<Cards>> call = hearthstoneService.loadSetCards(SetName);
-
-
-        call.enqueue(new Callback<List<Cards>>() {
-            @Override
-            public void onResponse(Call<List<Cards>> call, Response<List<Cards>> response) {
-
-                if (response.isSuccessful()) {
-                    assert response.body() != null;
-
-                    Log.d(TAG, "onResponse" + response.body());
-
-                    rvAllCards.setAdapter(cardAdapter);
-                    cardAdapter.setData(response.body());
-
-
-                } else {
-                    assert response.errorBody() != null;
-                    Log.d(TAG, "onResponseError" + response.errorBody().toString());
-                    Toast.makeText(AllCardsBrain.this, "Card Doesn't exist", Toast.LENGTH_SHORT).show();
-
-                }
-            }
-
-
-            @Override
-            public void onFailure(Call<List<Cards>> call, Throwable t) {
-            }
-        });
-
-    }*/
-
 }
+
 
