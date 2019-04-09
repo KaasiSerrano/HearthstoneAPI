@@ -9,36 +9,33 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:background="@color/Background_Card_Color"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/Background_Card_Color">
 
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_card_Rarity_"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:padding="5dp"
+            android:layout_marginEnd="8dp"
             android:text="RarityINFO"
             android:textSize="18sp"
             app:fontFamily="sans-serif-light"
-            app:layout_constraintBottom_toTopOf="@+id/tv_card_Type_"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/Guideline_Middle"
             app:layout_constraintTop_toBottomOf="@+id/tv_card_Flavor_" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_card_Type_"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:gravity="center"
-            android:padding="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:text="typeINFO"
             android:textSize="18sp"
             app:fontFamily="sans-serif-light"
-            app:layout_constraintBottom_toTopOf="@+id/tv_card_Set_"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/Guideline_Middle"
             app:layout_constraintTop_toBottomOf="@+id/tv_card_Rarity_" />
 
@@ -73,27 +70,28 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_card_Set_"
-            android:layout_width="wrap_content"
-            android:layout_height="22dp"
-            android:layout_marginStart="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:text="setINFO"
             android:textSize="18sp"
             app:fontFamily="sans-serif-light"
-            app:layout_constraintBottom_toTopOf="@+id/tv_card_Class_"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/Guideline_Middle"
             app:layout_constraintTop_toBottomOf="@+id/tv_card_Type_" />
 
 
-
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_card_Class_"
-            android:layout_width="wrap_content"
-            android:layout_height="22dp"
-            android:layout_marginStart="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:text="classINFO"
             android:textSize="18sp"
             app:fontFamily="sans-serif-light"
-            app:layout_constraintBottom_toTopOf="@+id/tv_card_Set_"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/Guideline_Middle"
             app:layout_constraintTop_toBottomOf="@+id/tv_card_Set_" />
 
@@ -107,21 +105,18 @@
             android:src="@drawable/ic_launcher_background"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+            app:layout_constraintTop_toBottomOf="@id/switch1"/>
         <TextView
             android:id="@+id/tv_Description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
             android:fontFamily="sans-serif-light"
             android:text="Rarity:"
             android:textAllCaps="true"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBaseline_toBaselineOf="@+id/tv_card_Rarity_"
-            app:layout_constraintEnd_toStartOf="@+id/Guideline_Middle"
-            app:layout_constraintVertical_chainStyle="spread" />
+            app:layout_constraintEnd_toStartOf="@+id/Guideline_Middle" />
 
         <ImageView
             android:id="@+id/iv_HS_Divider"
@@ -176,14 +171,13 @@
             app:layout_constraintEnd_toStartOf="@+id/Guideline_Middle" />
 
 
-
         <TextView
             android:id="@+id/tv_mana_cost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:fontFamily="sans-serif-light"
-            android:text="Mana cost:"
+            android:text="Mana:"
             android:textAllCaps="true"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -196,6 +190,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.5" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Favorite"
+            app:layout_constraintBottom_toTopOf="@+id/iv_card_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
